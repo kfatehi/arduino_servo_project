@@ -39,7 +39,7 @@ void setup() {
   Serial.begin(9600);
   servoA.attach(servoA_Pin); // tell the servoA object which pin to use
   servoB.attach(servoB_Pin); // tell the servoB object which pin to use
-servoA.attach(servoC_Pin); // tell the servoC object which pin to use
+  servoA.attach(servoC_Pin); // tell the servoC object which pin to use
   servoB.attach(servoD_Pin); // tell the servoD object which pin to use
 }
  
@@ -53,11 +53,11 @@ void loop() {
   servoB_Value = map(potB_Value, 0, 1023, ServoMin, ServoMax);  // Servos take 0 to 179, not 0 to 254
   servoB.write(servoB_Value); // Write the mapped value (from 0 to 179) to the servo
  
-potC_Value = analogRead(potC_Pin);
+  potC_Value = analogRead(potC_Pin);
   servoC_Value = map(potC_Value, 0, 1023, ServoMin, ServoMax);  // Servos take 0 to 179, not 0 to 254
   servoC.write(servoC_Value); // Write the mapped value (from 0 to 179) to the servo
  
-potD_Value = analogRead(potD_Pin);
+  potD_Value = analogRead(potD_Pin);
   servoD_Value = map(potD_Value, 0, 1023, ServoMin, ServoMax);  // Servos take 0 to 179, not 0 to 254
   servoD.write(servoD_Value); // Write the mapped value (from 0 to 179) to the servo
  
